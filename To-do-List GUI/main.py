@@ -57,3 +57,17 @@ tasks_listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=tasks_listbox.yview)
 
 # Action Buttons
+action_frame = tk.Frame(root, padx=10, pady=10)
+action_frame.pack()
+
+remove_button = tk.Button(action_frame, text="Remove Task", command=remove_task)
+remove_button.pack(side=tk.LEFT, padx=10)
+
+clear_button = tk.Button(action_frame, text="Clear All Tasks", command=clear_all_tasks)
+clear_button.pack(side=tk.LEFT, padx=10)
+
+exit_button = tk.Button(action_frame, text="Exit", command=exit_app)
+exit_button.pack(side=tk.LEFT, padx=10)
+
+# Run the App
+root.mainloop()
